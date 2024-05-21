@@ -18,6 +18,11 @@ function keydownEvent(e) {
   const el = document.querySelector(`#${e.code}`);
   codeTag.innerHTML = `key : ${e.code}`;
   keyTag.innerHTML = `code : ${e.key}`;
+  colorArr = [];
+  for (let i = 0; i < 3; i++) {
+    colorArr.push(parseInt(Math.random() * 256));
+  }
+  el.style.setProperty("--font-color", `rgb(${colorArr})`);
   el.classList.add("btnon");
   keydown.classList.add("on");
   setTimeout(function () {
