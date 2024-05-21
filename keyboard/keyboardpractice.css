@@ -1,0 +1,62 @@
+#my-input {
+  width: 500px;
+  height: 50px;
+}
+
+.events {
+  width: 450px;
+  height: 50px;
+  margin: 3px;
+  border: 1px solid black;
+  border-right: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.event {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-right: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keyboard {
+  width: 800px;
+}
+
+.key {
+  width: 50px;
+  height: 50px;
+  margin: 2px 1px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.function-keys {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+}
+
+#Backspace,
+#Tab,
+#CapsLock,
+#Enter,
+#ShiftLeft,
+#ShiftRight,
+#Space {
+  flex-grow: 1;
+}
+
+.row.row {
+  display: flex;
+  justify-content: center;
+}
