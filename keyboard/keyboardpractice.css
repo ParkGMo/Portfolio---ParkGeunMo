@@ -1,23 +1,43 @@
 #my-input {
   width: 500px;
   height: 50px;
+  margin-bottom: 5px;
+}
+#border {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 5px solid black;
 }
 
 .events {
   width: 450px;
   height: 50px;
   margin: 3px;
-  border: 1px solid black;
+  /* border: 1px solid white; */
+  border-left: 3px solid white;
+  font-weight: bold;
+  /* color: darkgreen; */
+  color: lime;
   border-right: 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: black;
+  border-radius: 20px;
+  /* border: 1px solid
+    linear-gradient(125deg, rgb(0, 255, 255) 50%, rgb(255, 255, 0) 90%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 255, 255, 0.482) 50%,
+    rgba(255, 255, 0, 0.591) 95%
+  ); */
 }
 .event {
   width: 100%;
   height: 100%;
   text-align: center;
-  border-right: 1px solid black;
+  border-right: 3px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,11 +50,22 @@
 .key {
   width: 50px;
   height: 50px;
-  margin: 2px 1px;
-  border: 1px solid black;
+  margin: 2px;
+  font-weight: bold;
+  /* color: darkgreen; */
+  color: lime;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  background-color: black;
+  /* border: 1px solid
+    linear-gradient(125deg, rgb(0, 255, 255) 50%, rgb(255, 255, 0) 95%);
+  background-image: linear-gradient(
+    125deg,
+    rgba(0, 255, 255, 0.482) 50%,
+    rgba(255, 255, 0, 0.591) 90%
+  ); */
 }
 
 .function-keys {
@@ -59,4 +90,29 @@
 .row.row {
   display: flex;
   justify-content: center;
+}
+#keydown.on {
+  letter-spacing: 2px;
+  /* background-color: blue; */
+  color: blue;
+  border-radius: 20px 0 0 20px;
+}
+#keypress.on {
+  letter-spacing: 2px;
+  /* background-color: darkgreen; */
+  color: darkgreen;
+}
+#keyup.on {
+  letter-spacing: 2px;
+  /* background-color: red; */
+  color: red;
+  border-radius: 0 20px 20px 0;
+}
+.btnon {
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+  transform: scale(0.9, 0.9);
+  color: red;
+  /* background-color: #7e7e7e;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  transform: scale(1.2, 1.2); */
 }
