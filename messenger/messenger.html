@@ -60,18 +60,79 @@
     </div>
   </body>
   <script>
-    const chatBox = document.querySelector(`#chat-Box`)
-    const input = document.querySelector(`#input`)
-    const sendBtn = document.querySelector(`#sendBtn`)
+    const chatBox = document.querySelector(`#chat-box`);
+    const input = document.querySelector(`#input`);
+    const sendBtn = document.querySelector(`#sendBtn`);
     input.focus();
 
-    function sendMessage () {
-        
+    function timeStamp(a) {
+      if (a < 1000) {
+        `<p>${parseInt(a / 1000)}초전</p>`;
+      } else if (a > 1000 && a - 1 < 60000) {
+        `<p>${parseInt(a / 60000)}분전</p>`;
+      } else if (a > 6000 && a < 3600000) {
+        `<p>${parseInt(a / 3600000)}시간전</p>`;
+      } else {
+        `<p>${parseInt(a / (360000 * 24))}일전</p>`;
+      }
     }
 
-    sendBtn.addEventListener('click', )
-    input.addEventListener('keypress', )
+    function sendMessage(e) {
+      console.log(e.timeStamp);
+      const inputValue = input.value;
+      if (inputValue.length == 0) {
+        return false;
+      }
+      let changMessage = inputValue.replaceAll(" ", "&nbsp;");
+      changMessage = changMessage.replaceAll("\n", "<br />");
+      changMessage = changMessage.replaceAll("피자", "🍕");
+      changMessage = changMessage.replaceAll("햄버거", "🍔");
+      changMessage = changMessage.replaceAll("핫도그", "🌭");
+      changMessage = changMessage.replaceAll("라면", "🍜");
+      changMessage = changMessage.replaceAll("초밥", "🍣");
+      changMessage = changMessage.replaceAll("고기", "🥩");
+      changMessage = changMessage.replaceAll("과자", "🍪");
+      changMessage = changMessage.replaceAll("포도", "🍇");
+      changMessage = changMessage.replaceAll("사과", "🍎");
+      changMessage = changMessage.replaceAll("딸기", "🍓");
+      changMessage = changMessage.replaceAll("바나나", "🍌");
+      changMessage = changMessage.replaceAll("파인애플", "🍍");
+      changMessage = changMessage.replaceAll("망고", "🥭");
+      changMessage = changMessage.replaceAll("체리", "🍒");
+      changMessage = changMessage.replaceAll("옥수수", "🌽");
+      changMessage = changMessage.replaceAll("수박", "🍉");
+      changMessage = changMessage.replaceAll("양파", "🧅");
+      changMessage = changMessage.replaceAll("당근", "🥕");
+      changMessage = changMessage.replaceAll("꽃", "🌼");
+      changMessage = changMessage.replaceAll("나무", "🌳");
+      changMessage = changMessage.replaceAll("ㅋㅋㅋ", "😁");
+      changMessage = changMessage.replaceAll("ㅜㅜ", "😥");
+      changMessage = changMessage.replaceAll("ㅎㅎ", "😄");
+      changMessage = changMessage.replaceAll("차", "🚗");
+      changMessage = changMessage.replaceAll("택시", "🚕");
+      changMessage = changMessage.replaceAll("버스", "🚌");
+      changMessage = changMessage.replaceAll("기차", "🚅");
+      changMessage = changMessage.replaceAll("비행기", "✈");
+      console.log(changMessage);
 
-  </script>
+      const div = document.createElement("div");
+      div.classList.add("bubble", "my-bubble");
+      div.innerHTML = `${changMessage}<br> ${timeStamp(e.timeStamp)}`;
+      chatBox.append(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+      input.value = "";
+      //   chatBox.lastElementChild.scrollIntoView();
+    }
+
+    function sendByEnter(e) {
+      console.log(e);
+      if (e.key == "Enter" && !e.shiftKey) {
+        sendMessage(e);
+        e.preventDefault();
+      }
+    }
+
+    sendBtn.addEventListener("click", sendMessage);
+    input.addEventListener("keypress", sendByEnter);
   </script>
 </html>

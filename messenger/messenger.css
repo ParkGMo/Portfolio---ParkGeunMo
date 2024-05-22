@@ -75,6 +75,11 @@ body {
   width: max-content;
 }
 
+.bubble p {
+  color: black;
+  font-size: xx-small;
+  text-align: right;
+}
 .friend-bubble {
   background-color: #f3f0f5;
   border-radius: 14px 14px 14px 0;
