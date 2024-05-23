@@ -65,15 +65,15 @@
     const sendBtn = document.querySelector(`#sendBtn`);
     input.focus();
 
-    function timeStamp(a) {
+    function TimeStamp(a) {
       if (a < 1000) {
-        `<p>${parseInt(a / 1000)}초전</p>`;
-      } else if (a > 1000 && a - 1 < 60000) {
-        `<p>${parseInt(a / 60000)}분전</p>`;
+        parseInt(a / 1000);
+      } else if (a > 1000 && a < 60000) {
+        parseInt(a / 60000);
       } else if (a > 6000 && a < 3600000) {
-        `<p>${parseInt(a / 3600000)}시간전</p>`;
+        parseInt(a / 3600000);
       } else {
-        `<p>${parseInt(a / (360000 * 24))}일전</p>`;
+        parseInt(a / (360000 * 24));
       }
     }
 
@@ -117,7 +117,7 @@
 
       const div = document.createElement("div");
       div.classList.add("bubble", "my-bubble");
-      div.innerHTML = `${changMessage}<br> ${timeStamp(e.timeStamp)}`;
+      div.innerHTML = `${changMessage}<br> <p>${e.timeStamp}</p>`;
       chatBox.append(div);
       chatBox.scrollTop = chatBox.scrollHeight;
       input.value = "";

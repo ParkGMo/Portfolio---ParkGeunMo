@@ -14,7 +14,7 @@ function keypressEvent(e) {
   }, 300);
 }
 function keydownEvent(e) {
-  //   console.log(`key : ${e.key}, code : ${e.code}`);
+  console.log(`key : ${e.key}, code : ${e.code}`);
   const el = document.querySelector(`#${e.code}`);
   codeTag.innerHTML = `key : ${e.code}`;
   keyTag.innerHTML = `code : ${e.key}`;
