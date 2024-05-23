@@ -63,22 +63,30 @@
     const chatBox = document.querySelector(`#chat-box`);
     const input = document.querySelector(`#input`);
     const sendBtn = document.querySelector(`#sendBtn`);
+    const now = new Date();
     input.focus();
 
     function TimeStamp(a) {
-      if (a < 1000) {
-        parseInt(a / 1000);
-      } else if (a > 1000 && a < 60000) {
-        parseInt(a / 60000);
-      } else if (a > 6000 && a < 3600000) {
-        parseInt(a / 3600000);
+      // const date1 = new Date(`${a}`);
+      // let diffDate = now - date1;
+      // console.log(now - date1);
+
+      if (a > 1000 && a <= 60000) {
+        return Math.ceil(a / 1000) + "초전";
+      } else if (a > 60000 && a <= 3600000) {
+        return Math.ceil(a / 60000) + "분전";
+      } else if (a > 3600000 && a <= 360000 * 24) {
+        return Math.ceil(a / 360000) + "시간전";
       } else {
-        parseInt(a / (360000 * 24));
+        return Math.ceil(a / (360000 * 24)) + "일전";
       }
     }
 
     function sendMessage(e) {
-      console.log(e.timeStamp);
+      let timeStamp = e.timeStamp;
+      let timeOrigin = e.view.performance.timeOrigin;
+      let diffTimeStamp = parseInt(timeOrigin - (timeOrigin - timeStamp));
+      console.log(diffTimeStamp);
       const inputValue = input.value;
       if (inputValue.length == 0) {
         return false;
@@ -108,16 +116,20 @@
       changMessage = changMessage.replaceAll("ㅋㅋㅋ", "😁");
       changMessage = changMessage.replaceAll("ㅜㅜ", "😥");
       changMessage = changMessage.replaceAll("ㅎㅎ", "😄");
-      changMessage = changMessage.replaceAll("차", "🚗");
+      changMessage = changMessage.replaceAll("자동차", "🚗");
       changMessage = changMessage.replaceAll("택시", "🚕");
       changMessage = changMessage.replaceAll("버스", "🚌");
       changMessage = changMessage.replaceAll("기차", "🚅");
       changMessage = changMessage.replaceAll("비행기", "✈");
-      console.log(changMessage);
+      changMessage = changMessage.replaceAll("집", "🏡");
+      // console.log(changMessage);
 
       const div = document.createElement("div");
       div.classList.add("bubble", "my-bubble");
-      div.innerHTML = `${changMessage}<br> <p>${e.timeStamp}</p>`;
+      div.innerHTML = `${changMessage}<br> <p>${TimeStamp(diffTimeStamp)}</p>`;
+      console.log(TimeStamp(diffTimeStamp));
+      // div.innerHTML = `${changMessage}<br> <p>${e.timeStamp}</p>`;
+      // div.innerHTML = `${changMessage}`;
       chatBox.append(div);
       chatBox.scrollTop = chatBox.scrollHeight;
       input.value = "";
