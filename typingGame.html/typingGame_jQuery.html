@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypingGame</title>
+    <script src="../jQuery/jquery-3.6.4.js"></script>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(../../resources/img/background.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    #container {
+      width: 90%;
+      height: 80%;
+      position: relative;
+      /* display: flex;
+      justify-content: center;
+      align-items: flex-end; */
+    }
+
+    #input {
+      width: 180px;
+      height: 45px;
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+    }
+
+    .word {
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 500;
+      position: absolute;
+    }
+
+    .score {
+      color: white;
+      font-size: 40px;
+      font-weight: 600;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 15px;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <input type="text" id="input" placeholder="단어를 입력하세요." />
+    </div>
+    <div class="score">총점 : 0</div>
+  </body>
+  <script>
+    const words = [
+      "DW",
+      "Javascript",
+      "DOM",
+      "BOM",
+      "document",
+      "window",
+      "Event",
+    ];
+    // const input = document.querySelector("#input");
+    // const scorePanel = document.querySelector(".score");
+    const input = $("#input");
+    const scorePanel = $(".score");
+    let count = 0;
+    let score = 0;
+    input.focus();
+
+    // const container = document.querySelector(`#container`);
+    const container = $("#container");
+    console.log(
+      `offsetwidth : ${container.offsetWidth}, offsetHeight : ${container.offsetHeight}`
+    );
+    const maxPositionX = container.offsetWidth - 90;
+    const maxPositionY = container.offsetHeight - 100;
+
+    function init() {
+      words.forEach(function (el) {
+        const span = document.createElement("span");
+        span.innerHTML = el;
+        // span.setAttribute("id", el);
+        $(span).attr("id", el);
+        // span.classList.add("word");
+        $(span).addClass("word");
+        // span.style.top = `${Math.floor(Math.random() * maxPositionY)}px`;
+        $(span).css("top", `${Math.floor(Math.random() * maxPositionY)}px`);
+        span.style.left = `${Math.floor(Math.random() * maxPositionX)}px`;
+        container.append(span);
+      });
+    }
+
+    input.addEventListener("change", function () {
+      const word = document.querySelector(`span[id=${input.value}]`);
+      console.log(word);
+      if (word != null) {
+        word.remove();
+        score = score + 100;
+        scorePanel.innerHTML = `총점 : ${score}`;
+        count++;
+        if (count == words.length) {
+          alert("Clear!!👏");
+          if (confirm("재도전??")) {
+            window.location.reload();
+          }
+        }
+      }
+      input.value = "";
+    });
+
+    function wordRain() {
+      const words = document.querySelectorAll(".word");
+      console.log(container.getBoundingClientRect().bottom);
+      setInterval(function () {
+        words.forEach(function (el) {
+          const rectSize = el.getBoundingClientRect();
+          el.style.top = `${rectSize.top + 10}px`;
+          if (
+            el.getBoundingClientRect().bottom >
+            parseInt(
+              container.getBoundingClientRect().bottom -
+                getComputedStyle(input).height.split("px")[0]
+            )
+          ) {
+            el.remove();
+          }
+        });
+      }, 1000);
+    }
+
+    init();
+    wordRain();
+
+    /*
+    	[JS 요약 설명]
+    	1. window.onload : 웹 브라우저 로딩 완료 상태를 확인합니다
+    	2. offsetWidth : margin을 제외한 (padding값, border값)까지 계산한 값을 가져옵니다
+    	3. clientWidth : margin값과 border값이 제외된 (padding값)까지만 적용된 내부의 실제 크기를 가져옵니다
+    	4. scrollWidth : 스크롤 영역일때 스크롤로 감싸여진 내용의 전체 크기를 가져옵니다
+    	5. getBoundingClientRect : viewport를 기준으로 특정 요소의 위치 값을 얻을 수 있습니다
+    	*/
+  </script>
+</html>
