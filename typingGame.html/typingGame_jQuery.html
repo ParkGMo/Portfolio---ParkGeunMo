@@ -157,10 +157,8 @@
 
     function wordRain() {
       const $words = $(".word");
-      const $container = $("#container");
-      const $input = $("#input");
 
-      console.log($container[0].getBoundingClientRect().bottom);
+      console.log(container[0].getBoundingClientRect().bottom);
 
       setInterval(function () {
         $words.each(function () {
@@ -171,8 +169,8 @@
           if (
             this.getBoundingClientRect().bottom >
             parseInt(
-              $container[0].getBoundingClientRect().bottom -
-                parseInt($input.css("height"))
+              container[0].getBoundingClientRect().bottom -
+                parseInt(input.css("height"))
             )
           ) {
             $el.remove();
