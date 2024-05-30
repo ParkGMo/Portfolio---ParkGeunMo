@@ -87,24 +87,29 @@
     const maxPositionY = container.height() - 100;
 
     function init() {
-      $(words).each(function (i, el) {
+      $(words).each((i, el) => {
         const span = $("<span></span>");
         span[0].innerHTML = el;
         span.attr("id", el);
         span.addClass("word");
-
         span.css("top", `${Math.floor(Math.random() * maxPositionY)}px`);
         span.css("left", `${Math.floor(Math.random() * maxPositionX)}px`);
         container.append(span);
       });
+      // $(words).each(function (i, el) {
+      //   const span = $("<span></span>");
+      //   span[0].innerHTML = el;
+      //   span.attr("id", el);
+      //   span.addClass("word");
+
+      //   span.css("top", `${Math.floor(Math.random() * maxPositionY)}px`);
+      //   span.css("left", `${Math.floor(Math.random() * maxPositionX)}px`);
+      //   container.append(span);
+      // });
     }
 
     input.on("change", function () {
-      console.log(input[0].value);
-      const word = $(`span[id=${input[0].value}]`);
-      // const word = document.querySelector(`span[id=${input.value}]`);
-      // console.log(`span[id=${input[0].value}]`);
-      console.log(filter(`#${input[0].value}`));
+      const word = document.querySelector(`span[id=${input[0].value}]`);
       if (word != null) {
         word.remove();
         score = score + 100;
@@ -122,9 +127,7 @@
 
     function wordRain() {
       const wordsArr = $(".word");
-
-      // console.log(container[0].getBoundingClientRect().bottom);
-
+      console.log(wordsArr);
       setInterval(function () {
         wordsArr.each(function () {
           const elVal = $(this);
