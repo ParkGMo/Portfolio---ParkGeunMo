@@ -39,6 +39,12 @@
       position: absolute;
       top: 80%;
     }
+    .word {
+      font-size: x-large;
+      color: white;
+      font-weight: bold;
+      position: absolute;
+    }
     .score {
       width: 20%;
       height: 10%;
@@ -52,6 +58,7 @@
   </style>
   <body>
     <div id="container">
+      <!-- <div><span class="word">DW</span></div> -->
       <input type="text" id="input" placeholder="단어를 입력하세요." />
     </div>
     <div class="score">총점 : 0</div>
@@ -69,7 +76,40 @@
     const $container = $("#container");
     const $input = $("#input");
     input.focus();
-
     let score = 0;
+    let count = 0;
+
+    const maxWidth = $container.width() - 90;
+    const maxHeight = $container.height() - 100;
+    const createSpan = $(`<span></span>`);
+
+    function init() {
+      $(words).each((i, el) => {
+        createSpan[0].innerHTML = el;
+        console.log(createSpan[0]);
+
+        const $span = $(createSpan);
+        // console.log(e);
+        $span.addClass("word");
+        $span.attr("id", el);
+        $container.append($span);
+        $span.css({
+          left: `${Math.random() * maxWidth}px`,
+          top: `${Math.random() * maxHeight}px`,
+        });
+      });
+    }
+    // console.log($(createDiv)[0]);
+
+    const inputVal = $input[0].value;
+
+    function rainWord() {
+      // divId.setInterval((e) => {
+      //   console.log(e);
+      // }, 1000);
+    }
+
+    init();
+    rainWord();
   </script>
 </html>
