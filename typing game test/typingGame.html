@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>typingGame</title>
+    <script src="/jquery-3.6.4.js"></script>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background-image: url(/background.jpg);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #container {
+      width: 90%;
+      height: 85vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #input {
+      position: absolute;
+      top: 100%;
+      width: 30%;
+      height: 5%;
+    }
+
+    .score {
+      color: white;
+      font-size: xx-large;
+      font-weight: bold;
+      position: absolute;
+      right: 5%;
+      top: 5%;
+    }
+
+    .word {
+      color: white;
+      font-size: xx-large;
+      font-weight: bold;
+      position: absolute;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <!-- <span id="DW" class="word">DW</span> -->
+      <input id="input" type="text" placeholder="단어를 입력하세요." />
+    </div>
+    <div class="score">총점 : 0</div>
+  </body>
+  <script>
+    const words = [
+      "DW",
+      "JavaScript",
+      "DOM",
+      "BOM",
+      "document",
+      "window",
+      "Event",
+    ];
+    const $container = $(`#container`);
+    const $input = $(`#input`);
+    const $score = $(`.score`);
+    let score = 0;
+    let count = 0;
+    input.focus();
+
+    const containerWidth = $container.width() - 90;
+    const containerHeight = $container.height() - 100;
+
+    function creatWord() {
+      $(words).each((i, e) => {
+        // console.log(i, e);
+        const spanTag = $(`<span></span>`);
+        spanTag.addClass(`word`);
+        spanTag.attr(`id`, e);
+        spanTag.css("top", Math.floor(Math.random() * containerHeight));
+        spanTag.css("left", Math.floor(Math.random() * containerWidth));
+        spanTag[0].innerHTML = e;
+        $container.append(spanTag);
+      });
+    }
+
+    $input.on("change", () => {
+      const wordId = document.querySelector(`span[id='${$input[0].value}']`);
+      if (wordId != null) {
+        wordId.remove();
+        score = score + 100;
+        count++;
+        $score[0].innerHTML = `총점 : ${score}`;
+        if (count == words.length) {
+          alert(`Game Clear!`);
+          if (confirm("재도전?")) {
+            window.location.reload();
+          }
+        }
+      }
+      $input[0].value = "";
+    });
+
+    function positionWord() {
+      const scoreSpan = $(`.word`);
+      scoreSpan.each((i, e) => {
+        setInterval(() => {
+          const eVal = e.getBoundingClientRect();
+          const eTop = $(e).css("top").split("px")[0];
+          const containerLocal = $container[0].getBoundingClientRect();
+          $(e).css("top", `${parseInt(eTop) + 10}px`);
+          if (eVal.bottom > containerLocal.bottom) {
+            e.remove();
+          }
+        }, 1000);
+      });
+    }
+
+    creatWord();
+    positionWord();
+  </script>
+</html>
