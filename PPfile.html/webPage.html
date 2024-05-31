@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./webPage.css" />
+    <script src="../jQuery/jquery-3.6.4.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="one" class="div2"></div>
+      <div id="two" class="div2"></div>
+      <div id="three" class="div2"></div>
+      <div id="four" class="div2"></div>
+      <div id="five" class="div2"></div>
+      <div id="six" class="div2"></div>
+      <div id="seven" class="div2"></div>
+      <!-- <div id="eight" class="div2"></div>
+      <div id="nine" class="div2"></div>
+      <div id="ten" class="div2"></div> -->
+    </div>
+  </body>
+  <script>
+    const container = document.querySelector("#container");
+    const divs = document.querySelectorAll(".div2");
+
+    container.addEventListener("mousover", (e) => {
+      console.log(e);
+      setInterval(() => {
+        $(divs).css("transform", "translateX(-10px)");
+      }, 1000);
+    });
+  </script>
+</html>
