@@ -2,8 +2,10 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 #container {
   /* border: 5px solid black; */
@@ -42,4 +44,38 @@ body {
   background-color: lightcoral;
   transform: scale(1.1);
   /* transform: translateX(); */
+}
+#css1 {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#colorDiv1 {
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#colorDiv2 {
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  cursor: pointer;
+  width: 50px;
 }

@@ -21,10 +21,31 @@
       <div id="nine" class="div2"></div>
       <div id="ten" class="div2"></div> -->
     </div>
+
+    <div id="css1">
+      <div id="colorDiv1"></div>
+      <div class="buttons">
+        <button class="red">red</button>
+        <button class="green">green</button>
+        <button class="blue">blue</button>
+      </div>
+    </div>
+    <br />
+    <div id="css1">
+      <div id="colorDiv2"></div>
+      <div class="buttons">
+        <div class="px"><span>px</span><input type="range" /></div>
+        <div class="em"><span>em</span><input type="range" /></div>
+        <div class="rem"><span>rem</span><input type="range" /></div>
+        <div class="vm"><span>vm</span><input type="range" /></div>
+        <div class="vh"><span>vh</span><input type="range" /></div>
+      </div>
+    </div>
   </body>
   <script>
     const container = document.querySelector("#container");
     const divs = document.querySelectorAll(".div2");
+    const colorDivTag = document.querySelector(`#colorDiv`);
 
     container.addEventListener("mousover", (e) => {
       console.log(e);
@@ -32,5 +53,21 @@
         $(divs).css("transform", "translateX(-10px)");
       }, 1000);
     });
+    // -----------------------------------------------------------------------------------
+    const redBtn = document.querySelectorAll(".red");
+    const greenBtn = document.querySelectorAll(".green");
+    const blueBtn = document.querySelectorAll(".blue");
+    console.log(colorDivTag);
+
+    $(redBtn).on("click", function () {
+      colorDivTag.style.backgroundColor = "red";
+    });
+    $(greenBtn).on("click", function () {
+      colorDivTag.style.backgroundColor = "green";
+    });
+    $(blueBtn).on("click", function () {
+      colorDivTag.style.backgroundColor = "blue";
+    });
+    // -----------------------------------------------------------------------------------
   </script>
 </html>
