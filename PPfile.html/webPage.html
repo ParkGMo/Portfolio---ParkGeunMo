@@ -34,11 +34,21 @@
     <div id="css1">
       <div id="colorDiv2"></div>
       <div class="buttons">
-        <div class="px"><span>px</span><input type="range" /></div>
-        <div class="em"><span>em</span><input type="range" /></div>
-        <div class="rem"><span>rem</span><input type="range" /></div>
-        <div class="vm"><span>vm</span><input type="range" /></div>
-        <div class="vh"><span>vh</span><input type="range" /></div>
+        <div class="px">
+          <span>px</span><input class="pxInput" type="range" />
+        </div>
+        <div class="em">
+          <span>em</span><input class="emInput" type="range" />
+        </div>
+        <div class="rem">
+          <span>rem</span><input class="remInput" type="range" />
+        </div>
+        <div class="vm">
+          <span>vm</span><input class="vmInput" type="range" />
+        </div>
+        <div class="vh">
+          <span>vh</span><input class="vhInput" type="range" />
+        </div>
       </div>
     </div>
   </body>
@@ -69,5 +79,12 @@
       colorDivTag.style.backgroundColor = "blue";
     });
     // -----------------------------------------------------------------------------------
+    const pxInput = document.querySelector(".pxInput");
+    const pxInputVal = pxInput.value;
+    console.log(pxInputVal);
+    const emInput = document.querySelector(".emInput");
+    const remInput = document.querySelector(".remInput");
+    const vmInput = document.querySelector(".vmInput");
+    const vhInput = document.querySelector(".vhInput");
   </script>
 </html>
