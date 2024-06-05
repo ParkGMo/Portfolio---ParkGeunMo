@@ -33,29 +33,69 @@
     <br />
     <div id="css1">
       <div id="colorDiv2">1</div>
-      <div class="buttons">
+      <div class="buttons sizeList" id="sizeList">
         <div class="px">
-          <span>px</span><input class="pxInput" type="range" />
+          <input
+            type="radio"
+            name="fontSize"
+            id="fontRadiopx"
+            class="fontRadio"
+          />
+          <label for="fontSize">px</label
+          ><input type="range" name="fontSize" id="pxInput" class="fontRange" />
         </div>
-        <!-- <div class="em">
-          <span>em</span><input class="emInput" type="range" />
+        <div class="em">
+          <input
+            type="radio"
+            name="fontSize"
+            id="fontRadioem"
+            class="fontRadio"
+          />
+          <label for="fontSize">em</label
+          ><input type="range" name="fontSize" id="emInput" class="fontRange" />
         </div>
         <div class="rem">
-          <span>rem</span><input class="remInput" type="range" />
+          <input
+            type="radio"
+            name="fontSize"
+            id="fontRadiorem"
+            class="fontRadio"
+          />
+          <label for="fontSize">rem</label
+          ><input
+            type="range"
+            name="fontSize"
+            id="remInput"
+            class="fontRange"
+          />
         </div>
         <div class="vm">
-          <span>vm</span><input class="vmInput" type="range" />
+          <input
+            type="radio"
+            name="fontSize"
+            id="fontRadiovm"
+            class="fontRadio"
+          />
+          <label for="fontSize">vm</label
+          ><input class="vmInput" type="range" id="vmInput" class="fontRange" />
         </div>
         <div class="vh">
-          <span>vh</span><input class="vhInput" type="range" />
-        </div> -->
+          <input
+            type="radio"
+            name="fontSize"
+            id="fontRadiovh"
+            class="fontRadio"
+          />
+          <label for="fontSize">vh</label
+          ><input type="range" name="fontSize" id="vhInput" class="fontRange" />
+        </div>
       </div>
     </div>
   </body>
   <script>
     const container = document.querySelector("#container");
     const divs = document.querySelectorAll(".div2");
-    const colorDivTag = document.querySelector(`#colorDiv`);
+    const colorDivTag = document.querySelector(`#colorDiv1`);
 
     container.addEventListener("mousover", (e) => {
       console.log(e);
@@ -67,7 +107,7 @@
     const redBtn = document.querySelectorAll(".red");
     const greenBtn = document.querySelectorAll(".green");
     const blueBtn = document.querySelectorAll(".blue");
-    console.log(colorDivTag);
+    // console.log(colorDivTag);
 
     $(redBtn).on("click", function () {
       colorDivTag.style.backgroundColor = "red";
@@ -79,15 +119,31 @@
       colorDivTag.style.backgroundColor = "blue";
     });
     // -----------------------------------------------------------------------------------
-    const pxInput = document.querySelector(".pxInput");
-    const pxInputVal = pxInput.value;
-    console.log(pxInputVal);
-    // const emInput = document.querySelector(".emInput");
-    // const remInput = document.querySelector(".remInput");
-    // const vmInput = document.querySelector(".vmInput");
-    // const vhInput = document.querySelector(".vhInput");
-    $(vmInput).on("click", function () {
-      colorDivTag.style.fontSize = `${pxInputVal}vm`;
+    const fontSizeList = document.getElementById("sizeList");
+    // console.log(fontSizeList);
+    // const pxInput = document.querySelector(".pxInput");
+    // const inputRadiopx = document.querySelector("#fontRadiopx");
+    const fontDivTag = document.querySelector(`#colorDiv2`);
+    const radionInput = document.querySelectorAll(".fontRadio");
+    const rangeInput = document.querySelectorAll(".fontRange");
+    console.log(rangeInput);
+    console.log(radionInput);
+    // $(.sizeList).
+
+    $(radionInput).on("change", (i) => {
+      // console.log(i);
+      $(i).each((idx, e) => {
+        // console.log(idx);
+        console.log(e);
+      });
+    });
+
+    $(radionInput).each((di, de) => {
+      // console.log(de.checked);
+
+      $(rangeInput).each((gi, ge) => {
+        // console.log(gi, ge);
+      });
     });
   </script>
 </html>

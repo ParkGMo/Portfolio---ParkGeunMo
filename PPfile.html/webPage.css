@@ -79,3 +79,7 @@ button {
   cursor: pointer;
   width: 50px;
 }
+.buttons {
+  width: 100%;
+  text-align: center;
+}
