@@ -32,12 +32,12 @@
     </div>
     <br />
     <div id="css1">
-      <div id="colorDiv2"></div>
+      <div id="colorDiv2">1</div>
       <div class="buttons">
         <div class="px">
           <span>px</span><input class="pxInput" type="range" />
         </div>
-        <div class="em">
+        <!-- <div class="em">
           <span>em</span><input class="emInput" type="range" />
         </div>
         <div class="rem">
@@ -48,7 +48,7 @@
         </div>
         <div class="vh">
           <span>vh</span><input class="vhInput" type="range" />
-        </div>
+        </div> -->
       </div>
     </div>
   </body>
@@ -82,9 +82,12 @@
     const pxInput = document.querySelector(".pxInput");
     const pxInputVal = pxInput.value;
     console.log(pxInputVal);
-    const emInput = document.querySelector(".emInput");
-    const remInput = document.querySelector(".remInput");
-    const vmInput = document.querySelector(".vmInput");
-    const vhInput = document.querySelector(".vhInput");
+    // const emInput = document.querySelector(".emInput");
+    // const remInput = document.querySelector(".remInput");
+    // const vmInput = document.querySelector(".vmInput");
+    // const vhInput = document.querySelector(".vhInput");
+    $(vmInput).on("click", function () {
+      colorDivTag.style.fontSize = `${pxInputVal}vm`;
+    });
   </script>
 </html>
