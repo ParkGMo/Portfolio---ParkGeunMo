@@ -104,7 +104,8 @@ body {
 }
 button {
   cursor: pointer;
-  width: 50px;
+  width: 48px;
+  height: 32px;
 }
 .buttons {
   width: 100%;
