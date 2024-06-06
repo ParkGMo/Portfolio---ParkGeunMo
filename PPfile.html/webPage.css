@@ -46,8 +46,9 @@ body {
   /* transform: translateX(); */
 }
 #css1 {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
+  padding: 50px;
   border: 2px solid black;
   background-color: wheat;
   display: flex;
@@ -65,15 +66,41 @@ body {
   justify-content: center;
   align-items: center;
 }
-#colorDiv2 {
-  width: 250px;
-  height: 250px;
+.containerCss2 {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#css2 {
+  width: 320px;
+  height: 160px;
+  padding: 40px;
   border: 2px solid black;
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.sizeDiv2 {
+  width: auto;
+  height: auto;
+  font-size: x-large;
+  /* border: 2px solid black; */
+  border-radius: 10%;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.fontRange {
+  font-size: large;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
 }
 button {
   cursor: pointer;

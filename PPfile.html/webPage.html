@@ -31,63 +31,75 @@
       </div>
     </div>
     <br />
-    <div id="css1">
-      <div id="colorDiv2">1</div>
-      <div class="buttons sizeList" id="sizeList">
+    <br />
+    <br />
+    <br />
+    <!-- <div class="buttons sizeList" id="sizeList">
+    </div> -->
+    <div class="containerCss2">
+      <div id="css2">
+        <div id="sizeDivPx2" class="sizeDiv2">PX</div>
         <div class="px">
-          <input
-            type="radio"
-            name="fontSize"
-            id="fontRadiopx"
-            class="fontRadio"
-          />
-          <label for="fontSize">px</label
-          ><input type="range" name="fontSize" id="pxInput" class="fontRange" />
+          <label for="fontSize" class="fontRange"
+            >px
+            <input class="pxInput" type="range" name="fontSize" id="pxInput" />
+          </label>
         </div>
+      </div>
+      <div id="css2">
+        <div id="sizeDivEm2" class="sizeDiv2">EM</div>
         <div class="em">
-          <input
-            type="radio"
-            name="fontSize"
-            id="fontRadioem"
-            class="fontRadio"
-          />
-          <label for="fontSize">em</label
-          ><input type="range" name="fontSize" id="emInput" class="fontRange" />
+          <label for="fontSize" class="fontRange"
+            >em
+            <input
+              class="emInput"
+              type="range"
+              name="fontSize"
+              id="emInput"
+              min="0"
+              max="10"
+            />
+          </label>
         </div>
+      </div>
+      <div id="css2">
+        <div id="sizeDivRem2" class="sizeDiv2">REM</div>
         <div class="rem">
-          <input
-            type="radio"
-            name="fontSize"
-            id="fontRadiorem"
-            class="fontRadio"
-          />
-          <label for="fontSize">rem</label
-          ><input
-            type="range"
-            name="fontSize"
-            id="remInput"
-            class="fontRange"
-          />
+          <label for="fontSize" class="fontRange"
+            >rem
+            <input
+              class="remInput"
+              type="range"
+              id="remInput"
+              min="0"
+              max="10"
+            />
+          </label>
         </div>
-        <div class="vm">
-          <input
-            type="radio"
-            name="fontSize"
-            id="fontRadiovm"
-            class="fontRadio"
-          />
-          <label for="fontSize">vm</label
-          ><input class="vmInput" type="range" id="vmInput" class="fontRange" />
+      </div>
+      <div id="css2">
+        <div id="sizeDivVw2" class="sizeDiv2">VW</div>
+        <div class="vw">
+          <label for="fontSize" class="fontRange"
+            >vw
+            <input class="vwInput" type="range" id="vwInput" min="0" max="10" />
+          </label>
         </div>
+      </div>
+      <div id="css2">
+        <div id="sizeDivVh2" class="sizeDiv2">VH</div>
         <div class="vh">
-          <input
-            type="radio"
-            name="fontSize"
-            id="fontRadiovh"
-            class="fontRadio"
-          />
-          <label for="fontSize">vh</label
-          ><input type="range" name="fontSize" id="vhInput" class="fontRange" />
+          <label for="fontSize" class="fontRange"
+            >vh
+            <input
+              class="vhInput"
+              type="range"
+              name="fontSize"
+              id="vhInput"
+              min="0"
+              max="10"
+            />
+          </label>
         </div>
       </div>
     </div>
@@ -119,31 +131,41 @@
       colorDivTag.style.backgroundColor = "blue";
     });
     // -----------------------------------------------------------------------------------
-    const fontSizeList = document.getElementById("sizeList");
-    // console.log(fontSizeList);
-    // const pxInput = document.querySelector(".pxInput");
-    // const inputRadiopx = document.querySelector("#fontRadiopx");
-    const fontDivTag = document.querySelector(`#colorDiv2`);
-    const radionInput = document.querySelectorAll(".fontRadio");
-    const rangeInput = document.querySelectorAll(".fontRange");
-    console.log(rangeInput);
-    console.log(radionInput);
-    // $(.sizeList).
-
-    $(radionInput).on("change", (i) => {
-      // console.log(i);
-      $(i).each((idx, e) => {
-        // console.log(idx);
-        console.log(e);
-      });
+    const sizeDivPxTag = document.getElementById("sizeDivPx2");
+    const pxInput = document.getElementById("pxInput");
+    $(pxInput).on("click", () => {
+      const pxInputVal = pxInput.value;
+      $(sizeDivPxTag).css("fontSize", `${pxInputVal}px`);
+      sizeDivPxTag.innerHTML = `${pxInputVal}px`;
     });
-
-    $(radionInput).each((di, de) => {
-      // console.log(de.checked);
-
-      $(rangeInput).each((gi, ge) => {
-        // console.log(gi, ge);
-      });
+    const sizeDivEmTag = document.getElementById("sizeDivEm2");
+    const emInput = document.getElementById("emInput");
+    $(emInput).on("click", () => {
+      const emInputVal = emInput.value;
+      $(sizeDivEmTag).css("fontSize", `${emInputVal}em`);
+      sizeDivEmTag.innerHTML = `${emInputVal}em`;
     });
+    const sizeDivRemTag = document.getElementById("sizeDivRem2");
+    const remInput = document.getElementById("remInput");
+    $(remInput).on("click", () => {
+      const remInputVal = remInput.value;
+      $(sizeDivRemTag).css("fontSize", `${remInputVal}rem`);
+      sizeDivRemTag.innerHTML = `${remInputVal}rem`;
+    });
+    const sizeDivVwTag = document.getElementById("sizeDivVw2");
+    const vwInput = document.getElementById("vwInput");
+    $(vwInput).on("click", () => {
+      const vwInputVal = vwInput.value;
+      $(sizeDivVwTag).css("fontSize", `${vwInputVal}vw`);
+      sizeDivVwTag.innerHTML = `${vwInputVal}vw`;
+    });
+    const sizeDivVhTag = document.getElementById("sizeDivVh2");
+    const vhInput = document.getElementById("vhInput");
+    $(vhInput).on("click", () => {
+      const vhInputVal = vhInput.value;
+      $(sizeDivVhTag).css("fontSize", `${vhInputVal}vh`);
+      sizeDivVhTag.innerHTML = `${vhInputVal}vh`;
+    });
+    // -----------------------------------------------------------------------------------
   </script>
 </html>
