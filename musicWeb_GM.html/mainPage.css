@@ -22,6 +22,7 @@ body {
 }
 .HomePage-header .header-left {
   text-align: center;
+  cursor: pointer;
 }
 .HomePage-header .header-right {
   align-self: flex-end;
@@ -56,23 +57,28 @@ body {
 .searchBox-area .searchBox-input {
   width: 50%;
   color: white;
-  font-size: 32px;
+  font-size: 24px;
   background-color: black;
   border: 0;
   border-bottom: 2px solid white;
-  padding-left: 4%;
+  /* padding-left: 4%; */
   height: 48px;
+  transition: 0.3s;
 }
 .searchBox-area .searchBox-input:hover {
   color: white;
-  font-size: 32px;
   background-color: black;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
   /* padding-left: 4%; */
   height: 48px;
-  width: 80%;
+  width: 70%;
   transition: 0.3s;
 }
+/* .content-box {
+  width: 100%;
+  border-radius: 24px;
+  background-color: #ffffff;
+} */
 .index-list {
   height: 40px;
   padding: 8px;
@@ -85,6 +91,10 @@ body {
   gap: 12px;
   cursor: pointer;
 }
+.index-list > li {
+  transition: 0.5s;
+  /* background-color: white; */
+}
 .index-list > li:hover {
   /* text-decoration: underline; */
   display: flex;
@@ -96,6 +106,16 @@ body {
   border: 2px double white;
   transition: 0.5s;
 }
+.index-chart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+/* .index-chart-rank:hover {
+  background-color: darkgray;
+} */
 .index-chart-ranks {
   width: 100%;
   display: flex;
@@ -131,4 +151,64 @@ body {
 }
 .music-artist:hover {
   text-decoration: underline;
+}
+.music-icons {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+}
+.music-icons > .bx {
+  cursor: pointer;
+}
+
+.index-artists {
+  width: 100%;
+  /* width: fit-content; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  cursor: pointer;
+}
+.artist-img-icon {
+  width: 200px;
+  height: 230px;
+  position: relative;
+}
+.artist-img {
+  position: absolute;
+  width: 100%;
+  border-radius: 32px;
+  top: 0;
+}
+.artist-img-icon > .bx {
+  color: darkgray;
+  position: absolute;
+  font-size: 32px;
+  bottom: 0px;
+  right: 0;
+}
+/* .artist-img-icon > .bx:hover {
+  transform: translateY(-32px);
+  transition: 0.5s;
+} */
+.artist-name {
+  margin: 0;
+  color: darkgray;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.artist-img:hover {
+  background-image: linear-gradient(black, white);
+}
+.artist-name:hover {
+  text-decoration: underline;
+}
+.index-genre {
+  width: 100%;
 }
