@@ -1,0 +1,61 @@
+.index-chart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+section.hidden {
+  display: none;
+  transition: 0.3;
+}
+/* .index-chart-rank:hover {
+  background-color: darkgray;
+} */
+.index-chart-ranks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.index-chart-rank {
+  padding: 20px;
+  padding-left: 8px;
+  /* margin: 8px; */
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid white;
+  gap: 16px;
+}
+.music-rank {
+  display: inline-block;
+  padding-right: 8px;
+  font-size: 30px;
+  font-weight: 900;
+}
+.music-img {
+  border-radius: 16px;
+}
+.music-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.music-artist {
+  color: darkgray;
+}
+.music-artist:hover {
+  text-decoration: underline;
+}
+.music-icons {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+}
+.music-icons > .bx {
+  cursor: pointer;
+}

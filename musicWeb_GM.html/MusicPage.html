@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="stylesheet" href="./resources/CSS/artist.css" />
+    <link rel="stylesheet" href="./resources/CSS/Chart.css" />
+    <link rel="stylesheet" href="./resources/CSS/genre.css" />
+    <link rel="stylesheet" href="./resources/CSS/main.css" />
+    <link rel="stylesheet" href="./resources/CSS/myBox.css" />
+    <link rel="stylesheet" href="./resources/CSS/playlist.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="resources/Javascript/MusicPage.js" defer></script>
+    <script src="resources/Javascript/playlist.js" defer></script>
+  </head>
+  <body>
+    <header class="HomePage-header">
+      <div class="header-Title header-left"><span>BGM MUSIC</span></div>
+      <!-- <div class="header-left">
+      </div> -->
+      <div class="header-right">
+        <h3 class="header-Subscrilbe">이용권</h3>
+        |
+        <h3 class="header-LogIn">Log In</h3>
+      </div>
+    </header>
+    <div class="searchBox">
+      <div class="searchBox-area">
+        <img
+          src="./resources/img/search-regular-24.png"
+          class="searchBox-icon"
+        /><input
+          type="text"
+          class="searchBox-input"
+          placeholder="검색어를 입력하세요!"
+        /><br />
+      </div>
+      <div class="index-search"></div>
+      <br />
+      <ul class="index-list">
+        <li class="index-list-chart">차트</li>
+        <span>|</span>
+        <li class="index-list-artist">아티스트</li>
+        <span>|</span>
+        <li class="index-list-genre">장르</li>
+        <span>|</span>
+        <li class="index-list-myBox">보관함</li>
+      </ul>
+    </div>
+    <section class="index-chart hidden">
+      <ol class="index-chart-ranks">
+        <li class="index-chart-rank">
+          <span class="music-rank">1</span>
+          <img
+            src="resources/img/aespaAlbumCover1.jpg"
+            width="72px"
+            height="72px"
+            class="music-img"
+          />
+          <span class="music-title">Supernova</span>
+          <span class="music-artist">aespa</span>
+        </li>
+      </ol>
+      <div class="music-icons">
+        <i class="bx bx-play"></i>
+        <i class="bx bx-list-plus"></i>
+        <i class="bx bxs-download"></i>
+      </div>
+    </section>
+    <section class="index-artists hidden">
+      <div class="index-artist">
+        <div class="artist-img-icon">
+          <img src="resources/img/aespalogo.jpg" class="artist-img" />
+          <i class="bx bx-play-circle"></i>
+        </div>
+        <p class="artist-name">aespa</p>
+      </div>
+    </section>
+    <section class="index-genre hidden">
+      <div class="content-box genre-boxes">
+        <figure>
+          <div class="genre-title"><span>K-pop</span></div>
+        </figure>
+      </div>
+    </section>
+    <section class="index-myBox hidden">
+      <div class="content-box myBox-boxes">
+        <figure>
+          <div class="myBox-title"><span>보관함</span></div>
+        </figure>
+      </div>
+    </section>
+
+    <div class="playlist-Popup-box">
+      <span><i class="bx bx-grid-small" id="sizeBtn"></i></span>
+      <img src="resources/img/aespaAlbumCover1.jpg" />
+      <div class="playlist-icons">
+        <i class="bx bx-first-page"></i>
+        <i class="bx bx-play" id="playBtn"></i>
+        <i class="bx bx-last-page"></i>
+      </div>
+      <p class="playlist-title">Supernova</p>
+      <p class="playlist-artist">aespa</p>
+    </div>
+
+    <div class="playlist-Popup-box1">
+      <span><i class="bx bx-grid-small" id="sizeBtn"></i></span>
+      <div class="playlist-contents">
+        <div class="playlist-content1">
+          <div class="playlist-icons">
+            <i class="bx bx-first-page"></i>
+            <i class="bx bx-play" id="playBtn"></i>
+            <i class="bx bx-last-page"></i>
+          </div>
+          <img src="resources/img/aespaAlbumCover1.jpg" class="playlist-img" />
+        </div>
+        <div class="playlist-content2">
+          <p class="playlist-title">Supernova</p>
+          <p class="playlist-artist">aespa</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

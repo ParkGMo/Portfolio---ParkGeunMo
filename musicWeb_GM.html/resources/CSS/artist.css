@@ -1,0 +1,45 @@
+.index-artists {
+  width: 100%;
+  /* width: fit-content; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  cursor: pointer;
+}
+.artist-img-icon {
+  width: 200px;
+  height: 230px;
+  position: relative;
+}
+.artist-img {
+  position: absolute;
+  width: 100%;
+  border-radius: 32px;
+  top: 0;
+}
+.artist-img-icon > .bx {
+  color: darkgray;
+  position: absolute;
+  font-size: 32px;
+  bottom: 0px;
+  right: 0;
+}
+/* .artist-img-icon > .bx:hover {
+  transform: translateY(-32px);
+  transition: 0.5s;
+} */
+.artist-name {
+  margin: 0;
+  color: darkgray;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.artist-img:hover {
+  background-image: linear-gradient(black, white);
+}
+.artist-name:hover {
+  text-decoration: underline;
+}

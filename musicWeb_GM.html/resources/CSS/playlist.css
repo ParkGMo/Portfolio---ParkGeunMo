@@ -1,0 +1,139 @@
+body {
+  position: relative;
+}
+
+.playlist-Popup-box {
+  position: absolute;
+  top: 0;
+  width: 240px;
+  height: 300px;
+  background-color: indigo;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .playlist-Popup-box > .bx-grid-small { */
+.playlist-Popup-box > span {
+  display: inline-block;
+  text-align: end;
+  width: 100%;
+}
+.playlist-Popup-box > span > .bx-grid-small {
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px;
+  font-size: 32px;
+  text-align: end;
+}
+/* .playlist-Popup-box > .bx-grid-small:hover { */
+.playlist-Popup-box > span > .bx-grid-small:hover {
+  color: darkmagenta;
+}
+.playlist-Popup-box > img {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 24px;
+}
+.playlist-Popup-box > .playlist-icons {
+  cursor: pointer;
+  margin-top: 16px;
+  font-size: 32px;
+}
+.playlist-Popup-box > .playlist-icons > i:hover {
+  cursor: pointer;
+  color: darkviolet;
+  transform: scale(1.2);
+}
+
+.playlist-Popup-box > .playlist-title {
+  cursor: pointer;
+  margin: 0;
+  margin-top: 16px;
+}
+.playlist-Popup-box > .playlist-title:hover {
+  font-weight: bold;
+}
+.playlist-Popup-box > .playlist-artist {
+  cursor: pointer;
+  margin-top: 8px;
+  color: darkgray;
+}
+.playlist-Popup-box > .playlist-artist:hover {
+  text-decoration: underline;
+}
+/* ----------------------------------------------------------- */
+.playlist-Popup-box1 {
+  position: absolute;
+  top: 400px;
+  width: 240px;
+  height: 120px;
+  background-color: indigo;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playlist-Popup-box1 > span {
+  display: inline-block;
+  text-align: end;
+  width: 100%;
+}
+.playlist-Popup-box1 > span > .bx-grid-small {
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px;
+  font-size: 32px;
+  text-align: end;
+}
+.playlist-contents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.playlist-Popup-box1 > span > .bx-grid-small:hover {
+  color: darkmagenta;
+}
+.playlist-Popup-box1 > .playlist-contents > .playlist-content1 > .playlist-img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 24px;
+}
+.playlist-Popup-box1
+  > .playlist-contents
+  > .playlist-content1
+  > .playlist-icons {
+  cursor: pointer;
+  font-size: 32px;
+}
+.playlist-icons i:hover {
+  cursor: pointer;
+  color: darkviolet;
+  transform: scale(1.2);
+}
+.playlist-content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.playlist-contents .playlist-title {
+  cursor: pointer;
+  margin: 0;
+  margin-top: 16px;
+}
+.playlist-contents .playlist-title:hover {
+  font-weight: bold;
+}
+.playlist-contents .playlist-artist {
+  cursor: pointer;
+  margin-top: 8px;
+  color: darkgray;
+}
+.playlist-contents .playlist-artist:hover {
+  text-decoration: underline;
+}
