@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="../CSS/logInPage.css" />
+    <link rel="stylesheet" href="../font/font.css" />
+  </head>
+  <body>
+    <img src="../img/DaejeonLoveU.png" class="loginPageLogo" />
+    <div class="login-container">
+      <h2><span>#</span> 로그인</h2>
+      <form action="login" method="POST" id="loginForm">
+        <div class="input-group">
+          <label for="email" class="IdLabel">ID</label>
+          <input type="text" id="text" name="text" required />
+        </div>
+        <div class="input-group">
+          <label for="password" class="PwLabel">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+        <div class="signUpBox">
+          <a href="../HTML/mainPage.html" class="returnPage">돌아가기</a>
+          <a href="../HTML/join.html" class="signUp-btn">회원가입</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="../Javascript/LoginPage.js"></script>
+</html>

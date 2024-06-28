@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+  </head>
+  <link rel="stylesheet" href="../CSS/join.css" />
+  <body>
+    <button class="logo">
+      <img src="../img/DaejeonLoveU.png" width="250px" />
+    </button>
+    <div class="container">
+      <h2># 회원가입</h2>
+      <form class="join-box">
+        <div class="form-box">
+          <label>아이디 입력</label>
+          <input
+            type="text"
+            id="id"
+            name="id"
+            required
+            placeholder="영문과 숫자를 같이 입력해주세요!"
+          />
+        </div>
+        <div class="form-box">
+          <label>비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="특수문자를 포함한 영문과 숫자를 입력해주세요!"
+          />
+        </div>
+        <div class="form-box">
+          <label>비밀번호 확인</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+            placeholder="위와 같이 입력해주세요!"
+          />
+        </div>
+        <div class="form-box">
+          <label>이메일</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="ex) ***@gmail.com"
+            aria-placeholder=""
+          />
+        </div>
+        <div class="form-box">
+          <label>이름</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="홍길동"
+          />
+        </div>
+        <div class="form-box">
+          <label>생년월일</label>
+          <input
+            type="number"
+            id="bd"
+            name="bd"
+            pattern="[0-9]{6}"
+            placeholder="ex) 110101"
+            required
+          />
+        </div>
+        <div class="form-box">
+          <label>전화번호</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+            placeholder="010-1234-5678"
+            required
+          />
+        </div>
+        <div class="form-box">
+          <label>닉네임</label>
+          <input
+            type="text"
+            id="nickName"
+            name="nickName"
+            placeholder="ex)StreetEast52"
+            required
+          />
+        </div>
+        <div class="form-box genderRadio">
+          <label for="gender" id="gender">성별</label>
+          <input
+            type="radio"
+            name="gender"
+            value="male"
+            id="male"
+            checked="checked"
+            required
+          />
+          <label for="male"> 남성</label>
+          <input type="radio" name="gender" value="female" id="female" />
+          <label for="female"> 여성</label>
+          <!-- <label for="gender" id="gender">성별</label>
+          <div class="genderBox">
+            <div class="maleBox">
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                id="male"
+                checked="checked"
+                required
+              />
+              <label for="male"> 남성</label>
+            </div>
+            <div class="femaleBox">
+              <input type="radio" name="gender" value="female" id="female" />
+              <label for="female"> 여성</label>
+            </div>
+          </div> -->
+        </div>
+        <button type="submit" class="joinBtn">Join</button>
+      </form>
+      <a href="../HTML/LogInPage.html" class="returnBtn">돌아가기</a>
+    </div>
+  </body>
+  <script src="../Javascript/join.js" type="module"></script>
+</html>

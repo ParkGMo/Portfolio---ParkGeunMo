@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데이트가 어렵다면~~</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../font/font.css" />
+    <link rel="stylesheet" href="../CSS/planner.css" />
+    <link rel="stylesheet" href="../CSS/mainPage.css" />
+    <link rel="stylesheet" href="../CSS/mainPage-content.css" />
+    <link rel="stylesheet" href="../CSS/calendar_wether.css" />
+    <link rel="stylesheet" href="../CSS/calendar_wether_date.css" />
+  </head>
+  <body>
+    <!-- title -->
+    <header class="mainPage-header">
+      <h1 class="header-title">
+        <!-- <span class="header-title-span">데이트</span>가 어렵다면 ~~! -->
+        <img
+          src="../img/DaejeonLoveU.png"
+          width="320px"
+          class="mainPage-logo"
+        />
+      </h1>
+      <div class="Tag-titles">
+        <p class="h-Tag1p" id="h-JMT">
+          <span class="h-Tag1Span">#</span>맛집&nbsp;
+        </p>
+        <p class="h-Tag2p" id="h-cafe">
+          <span class="h-Tag2Span">#</span>카페&nbsp;
+        </p>
+        <p class="h-Tag3p" id="h-hotPlace">
+          <span class="h-Tag3Span">#</span>핫플
+        </p>
+        <p class="h-Tag4p" id="h-epilogue">
+          <span class="h-Tag4Span">#</span>데이트후기
+        </p>
+        <aside class="categories" id="categories">
+          <!-- <div class="short-category">
+            <i class="bx bx-list-ul"></i>
+          </div> -->
+          <div class="long-category">
+            <div class="category-top">
+              <i class="bx bx-home-heart"></i>
+            </div>
+            <div class="category-center">
+              <i class="bx bx-restaurant"></i>
+              <i class="bx bxs-coffee bx-flip-horizontal"></i>
+              <i class="bx bxs-map"></i>
+            </div>
+            <div class="category-bottom"><i class="bx bx-search"></i></div>
+          </div>
+        </aside>
+      </div>
+    </header>
+    <main class="main-center">
+      <!-- category -->
+      <!-- main Area -->
+      <div class="contents-center">
+        <div class="calender-wether">
+          <div class="calendar">
+            <div class="calendar-header">
+              <button id="prevMonth">&lt;</button>
+              <div id="currentMonthYear"></div>
+              <button id="nextMonth">&gt;</button>
+            </div>
+            <div class="calendar-body">
+              <div class="day-names">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+              </div>
+              <div class="days" id="days"></div>
+            </div>
+          </div>
+          <div class="wether-box">
+            <h1 class="wether-title">이번주 날씨</h1>
+            <div class="wether-week">
+              <div class="wether-item">
+                <p>Sun</p>
+                <div class="wether-am">
+                  <i class="bx bx-sun"></i>
+                </div>
+                <i class="bx bxs-chevrons-down"></i>
+                <div class="wether-pm">
+                  <i class="bx bx-sun"></i>
+                </div>
+                <div class="temperature">
+                  <span class="min-Tem">17°</span>
+                  <span class="mid-Tem">/</span>
+                  <span class="max-Tem">31°</span>
+                </div>
+              </div>
+              <div class="wether-item">
+                <p>Mon</p>
+                <div class="wether-am">
+                  <i class="bx bx-sun"></i>
+                </div>
+                <i class="bx bxs-chevrons-down"></i>
+                <div class="wether-pm">
+                  <i class="bx bx-sun"></i>
+                </div>
+                <div class="temperature">
+                  <span class="min-Tem">19°</span>
+                  <span class="mid-Tem">/</span>
+                  <span class="max-Tem">35°</span>
+                </div>
+              </div>
+              <div class="wether-item">
+                <p>Tue</p>
+                <div class="wether-am">
+                  <i class="bx bx-sun"></i>
+                </div>
+                <i class="bx bxs-chevrons-down"></i>
+                <div class="wether-pm">
+                  <i class="bx bx-sun"></i>
+                </div>
+                <div class="temperature">
+                  <span class="min-Tem">21°</span>
+                  <span class="mid-Tem">/</span>
+                  <span class="max-Tem">30°</span>
+                </div>
+              </div>
+              <div class="wether-item">
+                <p>Wed</p>
+                <div class="wether-am">
+                  <i class="bx bx-sun"></i>
+                </div>
+                <i class="bx bxs-chevrons-down"></i>
+                <div class="wether-pm">
+                  <i class="bx bx-cloud"></i>
+                </div>
+                <div class="temperature">
+                  <span class="min-Tem">21°</span>
+                  <span class="mid-Tem">/</span>
+                  <span class="max-Tem">28°</span>
+                </div>
+              </div>
+              <div class="wether-item">
+                <p>Thu</p>
+                <div class="wether-am">
+                  <i class="bx bx-cloud"></i>
+                </div>
+                <i class="bx bxs-chevrons-down"></i>
+                <div class="wether-pm">
+                  <i class="bx bx-cloud"></i>
+                </div>
+                <div class="temperature">
+                  <span class="min-Tem">19°</span>
+                  <span class="mid-Tem">/</span>
+                  <span class="max-Tem">28°</span>
+                </div>
+              </div>
+              <div class="wether-item">
+                <p>Fri</p>
+                <div class="wether-am">
+                  <i class="bx bx-cloud"></i>
+                </div>
+                <i class="bx bxs-chevrons-down"></i>
+                <div class="wether-pm">
+                  <i class="bx bx-cloud-rain"></i>
+                </div>
+                <div class="temperature">
+                  <span class="min-Tem">21°</span>
+                  <span class="mid-Tem">/</span>
+                  <span class="max-Tem">31°</span>
+                </div>
+              </div>
+              <div class="wether-item">
+                <p>Sat</p>
+                <div class="wether-am">
+                  <i class="bx bx-cloud-lightning"></i>
+                </div>
+                <i class="bx bxs-chevrons-down"></i>
+                <div class="wether-pm">
+                  <i class="bx bx-cloud-rain"> </i>
+                </div>
+                <div class="temperature">
+                  <span class="min-Tem">19°</span>
+                  <span class="mid-Tem">/</span>
+                  <span class="max-Tem">28°</span>
+                </div>
+              </div>
+            </div>
+            <div class="air-condition">
+              미세먼지농도 : <span> 51</span>㎍/m³ / 초미세먼지농도 :
+              <span>88</span>㎍/m³
+            </div>
+          </div>
+        </div>
+        <section class="subscribe-banner">공지사항</section>
+        <section class="subscribe-banner">이벤트</section>
+        <section class="restaurant-section">
+          <h1 class="content-title" id="hTag-JMT">
+            <span class="h-Tag1Span">#</span>맛집
+          </h1>
+        </section>
+        <section class="cafe-section">
+          <h1 class="content-title" id="hTag-cafe">
+            <span class="h-Tag2Span">#</span>카페
+          </h1>
+        </section>
+        <section class="hotplace-section">
+          <h1 class="content-title">
+            <span class="h-Tag3Span" id="hTag-hotPlace">#</span>핫플레이스
+          </h1>
+        </section>
+        <section class="subscribe-banner">제휴가게 및 쿠폰</section>
+        <section class="epilogue-section">
+          <h1 class="content-title">
+            <span class="h-Tag4Span" id="hTag-epilogue">#</span>데이트후기
+          </h1>
+        </section>
+        <!-- Footer -->
+        <footer class="mainPage-footer">
+          <div class="footer-left">
+            <p>2024 D.W.Academy</p>
+            <p>Tel. 010-7777-7777</p>
+            <p>대전광역시 중구 선화동</p>
+            <p>Daejeon_Love-U1004@gmail.com</p>
+            <div class="webPage-icons">
+              <i class="bx bxl-instagram-alt"></i>
+              <i class="bx bxl-facebook-circle"></i>
+              <i class="bx bxl-twitter"></i>
+              <i class="bx bxl-youtube"></i>
+            </div>
+          </div>
+          <div class="footer-right">
+            <a class="customer-service" href="../HTML/subPage.html"
+              >고객지원센터</a
+            >
+            <span>/</span>
+            <p class="customer-service">이용약관</p>
+            <p></p>
+          </div>
+        </footer>
+      </div>
+      <div class="login-banner-boxes">
+        <!-- login Box -->
+        <!--처음 로그인 화면 -->
+        <aside class="login-box">
+          <button class="signIn">로그인</button>
+          <button class="nonsignIn">비회원 로그인</button>
+          <button class="signUp">회원가입</button>
+        </aside>
+
+        <!--회원 로그인 작은화면 -->
+        <aside class="alogin-box hiddenALogin">
+          <div class="login-container">
+            <form action="login" method="POST" id="loginForm">
+              <div class="input-group">
+                <label for="email" class="IdLabel"></label>
+                <input
+                  type="text"
+                  id="id"
+                  name="text"
+                  placeholder="ID"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="password" class="PwLabel"></label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="password"
+                  required
+                />
+              </div>
+              <button type="submit" class="login-btn">로그인</button>
+              <div class="signUpBox"></div>
+            </form>
+          </div>
+        </aside>
+
+        <!-- </div> -->
+
+        <!--비회원 로그인 작은화면 -->
+        <aside class="blogin-box hiddenBLogin">
+          <label for="nicknameInfo">
+            <input type="text" id="nicknameInfo" placeholder="Nick Name ~" />
+          </label>
+          <label for="ageInfo"></label>
+          <select id="ageInfo">
+            <option value="">나이를 선택해주세요</option>
+          </select>
+          <div class="form-box genderInfo" id="genderInfo">
+            <label for="gender" id="gender"></label>
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              id="male"
+              checked="checked"
+              required
+            />
+            <label for="male"> 남성</label>
+            <input type="radio" name="gender" value="female" id="female" />
+            <label for="female"> 여성</label>
+          </div>
+          <button class="addPlanner">+ Planner</button>
+        </aside>
+
+        <div class="bloginBox2 hidden" id="bloginBox2">
+          <div class="welcome-message hidden" id="welcomeMessage"></div>
+          <button class="return-button" id="returnButton">로그아웃</button>
+        </div>
+
+        <!-- App / QR Code -->
+        <aside class="QR-code">
+          <p>앱으로 보기!</p>
+        </aside>
+      </div>
+    </main>
+    <!-- planner -->
+    <div class="plannerBox hiddenBox" id="plannerBox">
+      <div class="calendar-area">
+        <div class="calendar-planner hidden">
+          <div class="calendar-header-planner">
+            <button id="prevMonth-planner">&lt;</button>
+            <div id="currentMonthYear-planner"></div>
+            <button id="nextMonth-planner">&gt;</button>
+          </div>
+          <div class="calendar-body-planner">
+            <div class="day-names-planner">
+              <div>S</div>
+              <div>M</div>
+              <div>Tu</div>
+              <div>W</div>
+              <div>Th</div>
+              <div>F</div>
+              <div>Sa</div>
+            </div>
+            <div class="days-planner" id="days-planner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="planListBox" id="planListBox">
+        <h4 id="planner-title"></h4>
+        <div class="nav-planner" id="nav-planner">
+          <div class="day1"></div>
+          <i class="bx bx-sun" undefined></i>
+        </div>
+        <div class="nav-planner"></div>
+        <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+        <div class="resturantBoxes" id="resturantBoxes"></div>
+        <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+        <div class="cafeBoxes" id="cafeBoxes"></div>
+        <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+        <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
+        <!-- <button
+          class="shareBtn"
+          onclick="window.open(`../HTML/sharePage.html`, `_blank`,`width=800px, height=500px, location = no, menubar = no, toolbar = no`)"
+        >
+          공유하기
+        </button> -->
+        <button class="shareBtn" id="shareBtn">공유하기</button>
+      </div>
+      <div class="changeSize">
+        <i class="changeSizeBtn bx bx-chevrons-down"></i>
+      </div>
+    </div>
+  </body>
+  <script src="../Javascript/planner-mainPage.js" type="module"></script>
+  <script src="../Javascript/mainPage.js" type="module"></script>
+  <script src="../Javascript/calendar.js" type="module"></script>
+  <script src="../Javascript/calendarRangeX.js" type="module"></script>
+  <script src="../Javascript/LogIn.js" type="module"></script>
+</html>

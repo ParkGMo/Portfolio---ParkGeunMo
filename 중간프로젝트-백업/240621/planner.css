@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  word-break: keep-all;
+  font-family: Ownglyph_noocar-Rg;
+}
+body {
+  position: relative;
+}
+.plannerBox {
+  display: flex;
+  position: fixed;
+  right: 12px;
+  bottom: 48px;
+  z-index: 1;
+}
+.planListBox {
+  width: fit-content;
+  padding: 8px 16px;
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  /* border-right: 0; */
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.small {
+  width: 30px;
+  height: 30px;
+  color: rgba(255, 255, 255, 0);
+  transition: 0.2s;
+}
+.small .calender-area,
+.small .planListBox {
+  display: none;
+}
+.planListBox {
+  background-color: snow;
+  border-radius: 24px;
+}
+.small > .changeSize > .bx {
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  padding: 12px 24px;
+  border-radius: 24px;
+  color: black;
+}
+.planListBox > h4 {
+  font-size: 20px;
+  margin: 6px;
+}
+.planListBoxes div {
+  padding: 12px 0;
+}
+.nav-planner {
+  font-weight: bold;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.day1 {
+  font-size: 24px;
+  font-weight: normal;
+  padding-right: 28px;
+}
+.day1:hover {
+  font-weight: bold;
+}
+.bx-chevron-left:hover,
+.bx-chevron-right:hover {
+  font-weight: bold;
+  transform: scale(1.2);
+  transition: 0.1s;
+}
+/* .firstDay {
+}
+.lastDay {
+} */
+.h-Tag1p:hover {
+  border-bottom: 2px solid #ffa600;
+}
+.h-Tag2p:hover {
+  border-bottom: 2px solid purple;
+}
+.h-Tag3p:hover {
+  border-bottom: 2px solid skyblue;
+}
+.h-Tag4p:hover {
+  border-bottom: 2px solid rgb(255, 51, 204);
+}
+.h-Tag1Span {
+  color: #ffa600;
+}
+.h-Tag2Span {
+  color: purple;
+}
+.h-Tag3Span {
+  color: skyblue;
+}
+.h-Tag4Span {
+  color: rgb(255, 51, 204);
+}
+
+.h-Tag1p,
+.h-Tag2p,
+.h-Tag3p,
+.h-Tag4p {
+  height: 28px;
+  width: fit-content;
+  font-size: 24px;
+}
+.resturantBox,
+.cafeBox,
+.hotPlaceBox {
+  font-size: 20px;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+input[type="checkbox"] {
+  accent-color: black;
+}
+.foodStore[type="checkbox"] {
+  accent-color: #ffa600;
+}
+.cafeStore[type="checkbox"] {
+  accent-color: purple;
+}
+.placeStore[type="checkbox"] {
+  accent-color: skyblue;
+}
+.bx-x {
+  color: rgba(125, 125, 125, 0.5);
+  font-size: 16px;
+  margin: 0 4px;
+  border-radius: 50%;
+}
+.bx-x:hover {
+  color: black;
+  transition: 0.2s;
+  background-color: rgba(125, 125, 125, 0.5);
+  border-radius: 50%;
+}
+/* .resturantBox {
+  position: relative;
+}
+.resturantBox > i {
+  position: absolute;
+  right: 8px;
+}
+.cafeBox {
+  position: relative;
+}
+.cafeBox > i {
+  position: absolute;
+  right: 8px;
+}
+.hotPlaceBox {
+  position: relative;
+}
+.hotPlaceBox > i {
+  position: absolute;
+  right: 8px;
+} */
+.shareBtn {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgb(255, 51, 204);
+  border-radius: 24px;
+  cursor: pointer;
+}
+.shareBtn:hover {
+  background-color: rgba(255, 51, 204, 0.2);
+  transition: 0.2s;
+}
+.changeSize {
+  position: absolute;
+  font-size: 20px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.changeSize .bx:hover {
+  font-weight: bold;
+}

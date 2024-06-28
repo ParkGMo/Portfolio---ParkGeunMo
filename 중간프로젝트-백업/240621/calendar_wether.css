@@ -1,0 +1,162 @@
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+.calender-wether {
+  display: flex;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+.calendar {
+  width: 300px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 51, 204);
+  color: white;
+  padding: 10px;
+}
+.calendar-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.calendar-body {
+  padding: 10px;
+}
+.day-names {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.day-names div,
+.days div {
+  width: 14%;
+  text-align: center;
+  font-weight: bold;
+}
+.days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.days div {
+  width: 14%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.days div:hover {
+  background-color: #f0f0f0;
+  color: black;
+  transition: 0.3s;
+}
+.days .selected {
+  background-color: rgb(255, 51, 204);
+  color: white;
+  /* border-radius: 50%; */
+}
+.days .range {
+  background-color: rgb(255, 51, 204);
+  color: white;
+}
+
+/* wether */
+.wether-box {
+  flex-grow: 1;
+  padding: 8px 12px;
+  margin-left: 6px;
+  padding-top: 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wether-title {
+  font-size: 22px;
+  font-weight: normal;
+  background-color: rgb(255, 51, 204);
+  border-radius: 10px;
+  margin: 8px 0;
+  padding: 4px;
+  color: white;
+  text-align: center;
+}
+
+.wether-week {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.wether-item {
+  font-size: 16px;
+  margin: 0 8px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wether-item > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wether-item > p {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.wether-item > i {
+  margin: 24px 0;
+}
+.wether-item > .wether-am,
+.wether-item > .wether-pm {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.air-condition {
+  margin: 16px 0;
+  font-size: 16px;
+}
+.air-condition > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.temperature {
+  font-size: 18px;
+}
+.min-Tem {
+  color: rgb(100, 100, 255);
+  margin-right: 2px;
+}
+.max-Tem {
+  color: rgb(255, 100, 100);
+  margin-left: 2px;
+}

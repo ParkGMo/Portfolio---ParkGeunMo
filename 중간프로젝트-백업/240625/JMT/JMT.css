@@ -1,0 +1,690 @@
+@font-face {
+  font-family: "Ownglyph_noocar-Rg";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_noocar-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: "Ownglyph_noocar-Rg";
+  margin: 0;
+  color: #3e3e3e;
+  background-color: snow;
+}
+
+#body {
+  height: 100%;
+  font-family: "Ownglyph_noocar-Rg";
+  margin: 0;
+  color: #3e3e3e;
+}
+span {
+  color: rgb(151, 50, 37);
+  margin: 5px;
+}
+.Logo {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1;
+
+  border-radius: 20px;
+}
+section {
+  margin: 100px 20px;
+}
+/* 헤더 부분 시작 */
+
+.header {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 350px;
+  /* margin-bottom: 100px; */
+  color: #3e3e3e;
+  position: relative;
+}
+.head {
+  height: 270px;
+}
+.backGround::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%
+    ),
+    url("사진/카페1.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* 불투명도 조절 */
+  z-index: -1; /* 배경으로 보내기 */
+  /* background-image: linear-gradient(, rgba(1, 1, 1, 5%)); */
+}
+.addrChild {
+  text-overflow: ellipsis;
+}
+.header-H1 {
+  font-size: 70px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.clear {
+  cursor: pointer;
+}
+#header-H2 {
+  cursor: pointer;
+}
+.header-Main {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.header-Input {
+  width: 60%;
+  height: 40px;
+  border: 1px solid white;
+  padding-left: 20px;
+  border: none;
+  background-color: rgb(151, 50, 37);
+  border-radius: 15px;
+  color: snow;
+  font-size: 24px;
+}
+.header-Anchor {
+  text-decoration: none;
+  font-size: 24px;
+  color: snow;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.header-img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+}
+.Search {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.clear {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  font-family: "Ownglyph_noocar-Rg";
+}
+.Search-bar {
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  cursor: pointer;
+}
+.CateGory {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+}
+.CateA,
+.CateD,
+.CateG,
+.CateJ,
+.CateL {
+  text-decoration: none;
+  color: #3e3e3e;
+  font-size: 36px;
+  position: relative;
+  cursor: pointer;
+}
+.CateA:hover {
+  color: rgb(151, 50, 37);
+  transition: 0.3 linear;
+}
+.CateD:hover {
+  color: rgb(151, 50, 37);
+  transition: 0.3 linear;
+}
+.CateG:hover {
+  color: rgb(151, 50, 37);
+  transition: 0.3 linear;
+}
+.CateJ:hover {
+  color: rgb(151, 50, 37);
+  transition: 0.3 linear;
+}
+.CateL:hover {
+  color: rgb(151, 50, 37);
+  transition: 0.3 linear;
+}
+
+.CateSA,
+.CateFA,
+.CateHA,
+.CateKA,
+.CateLA {
+  text-decoration: none;
+  color: black;
+}
+
+.Cate-box1,
+.Cate-box2,
+.Cate-box3,
+.Cate-box4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  gap: 20px;
+  top: 30%;
+  width: 300px;
+  height: max-content;
+  padding: 15px;
+  font-size: 36px;
+  transform: translatex(30%);
+}
+.Cate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Cate a {
+  width: 150px;
+  height: 100px;
+  text-align: center;
+}
+.Cate-subs {
+  display: flex;
+  align-items: center;
+  padding-left: 200px;
+  padding-top: 5px;
+  gap: 10px;
+}
+
+.Cate-sub {
+  text-decoration: none;
+  color: black;
+}
+.Cate-sub:hover {
+  color: rgb(151, 50, 37);
+  transition: 0.3s linear;
+}
+.result {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.hidden {
+  display: none;
+  color: red;
+}
+/* 헤더 부분 끝 */
+
+/* 사이드바 시작 */
+.sidebars {
+  top: 300px;
+  position: fixed;
+  width: 200px;
+  height: 550px;
+  border-radius: 30px;
+  margin-left: 60px;
+  backdrop-filter: blur(20px);
+  background-color: rgb(151, 50, 37);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 5px 1px gray;
+}
+
+.sidebars > h1 {
+  margin: 0;
+  color: snow;
+}
+.sidebars > h1:hover {
+  margin: 0;
+  transform: scale(1.1);
+}
+.sidebars > h2 {
+  margin: 0;
+  color: snow;
+}
+.sidebars > h2:hover {
+  margin: 0;
+  transform: scale(1.1);
+  color: lightgray;
+}
+.sidebar-subs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+
+.sidebar-sub {
+  list-style-type: none;
+  margin: 0;
+  border-radius: 15px;
+  padding: 0 5px;
+  height: 30px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 10px;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: snow;
+  color: #3e3e3e;
+  box-shadow: 1px 1px 5px 1px gray;
+}
+.sidebar-sub:hover {
+  transform: scale(1.05);
+}
+.sideinnerN {
+  font-size: 16px;
+  color: #3e3e3e;
+  font-weight: 700;
+}
+.sideinnerN:hover {
+  color: rgb(151, 50, 37);
+  white-space: nowrap;
+}
+.sideinnerT {
+  font-size: 18px;
+  color: #3e3e3e;
+  font-weight: 700;
+  /* overflow: hidden; */
+}
+.sideinnerT:hover {
+  color: rgb(151, 50, 37);
+}
+.side-bar {
+  width: 200px;
+  padding: 10px 20px;
+  background-color: rgb(151, 50, 37);
+  border-radius: 30px;
+  margin-left: 80px;
+  position: fixed;
+  top: 310px;
+  height: 450px;
+}
+.side-text {
+  list-style-type: none;
+  font-size: 24px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.side-text li {
+  padding: 5px 5px;
+  border: 1px solid snow;
+  border-radius: 20px;
+  background-color: snow;
+  cursor: pointer;
+}
+.side-text li:hover {
+  transform: scale(1.05);
+  color: rgb(151, 50, 37);
+}
+.side-category h1 {
+  padding-left: 5px;
+  font-size: 40px;
+  color: lightgray;
+}
+
+.up {
+  color: red;
+}
+.down {
+  color: #3e3e3e;
+}
+.sidebar-sub a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+.sidebar-sub a:hover {
+  color: rgb(151, 50, 37);
+}
+/* 사이드바 끝 */
+/* 미들부분(사진)시작 */
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 135.66px;
+}
+.middleH1 {
+  font-size: 48px;
+  letter-spacing: 20px;
+}
+/* 미들부분(사진) 끝*/
+/* 메인 부분 시작 */
+main {
+  margin: 0 350px;
+}
+.Main-img {
+  width: 300px;
+  height: 300px;
+  box-shadow: 1px 1px 5px 1px gray;
+}
+.MainH1 {
+  font-size: 60px;
+  bottom: 0;
+}
+.Main-title {
+  font-size: 36px;
+}
+.Main-box1,
+.Main-box2,
+.Main-box3,
+.Main-box4,
+.Main-box5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+  width: max-content;
+  cursor: pointer;
+}
+.Mainchart-inner1,
+.Mainchart-inner2,
+.Mainchart-inner3,
+.Mainchart-inner4 {
+  cursor: pointer;
+}
+.Mainchart-inner1:hover {
+  transform: scale(1.05);
+}
+.Mainchart-inner2:hover {
+  transform: scale(1.05);
+}
+.Mainchart-inner3:hover {
+  transform: scale(1.05);
+}
+.Mainchart-inner4:hover {
+  transform: scale(1.05);
+}
+.Hot {
+  color: red;
+}
+.back {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+.box-h1 {
+  margin: 0;
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  top: -30px;
+  font-size: 20px;
+}
+.box-h2 {
+  margin: 0;
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  top: 400px;
+  font-size: 20px;
+}
+.backImg {
+  z-index: -1;
+  width: 100%;
+  height: 820px;
+  margin: 0;
+}
+.backImgG {
+  height: 400px;
+  width: 370px;
+  border-radius: 20px;
+}
+.backImgG {
+  box-shadow: 1px 1px 5px 1px gray;
+  cursor: pointer;
+}
+.backImgG:hover {
+  transform: scale(0.95);
+}
+
+.back-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 400px;
+  margin-right: 100px;
+  gap: 20px;
+  position: relative;
+}
+#backImg {
+  transition: change opacity 2s linear 2s;
+
+  /* animation-timing-function: linear; */
+}
+
+@keyframes change {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 5px;
+}
+.box-img {
+  border-radius: 15px;
+  width: 300px;
+  height: 300px;
+  box-shadow: 1px 1px 5px 1px gray;
+}
+.box-img:hover {
+  transform: scale(1.05);
+  transition: 0.8s;
+}
+.box-point {
+  font-size: 20px;
+  padding: 0 5px;
+}
+.box-name {
+  font-size: 30px;
+}
+.Promise {
+  display: flex;
+  gap: 5px;
+  position: fixed;
+  top: 800px;
+  right: 0;
+  margin-right: 50px;
+}
+.Promise-but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #3e3e3e;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.9);
+  position: relative;
+  background-color: whitesmoke;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Ownglyph_noocar-Rg";
+}
+.Promise-but:hover {
+  animation: pulse 0.5s;
+}
+/* @keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 #4dbde5;
+  }
+  to {
+    box-shadow: 0 0 0px 10px transparent;
+  }
+} */
+.Top {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.TopLoop {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid #3e3e3e;
+  transform: translateX(-50%);
+  position: fixed;
+  font-size: 32px;
+  left: 50%;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.4;
+  transition: 0.3s;
+}
+.TopLoop:hover {
+  opacity: 1;
+}
+.TopLoop:active {
+  animation: pulse 0.3s;
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 black;
+  }
+  to {
+    box-shadow: 0 0 0px 15px transparent;
+  }
+}
+/* 메인 부분 끝*/
+/* 카테고리 CSS */
+/* .Mainchart {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  cursor: pointer;
+} */
+
+.Mainchart img {
+  border-radius: 20px;
+}
+.input-thing {
+  border: 1px solid #3e3e3e;
+  width: 700px;
+  height: 700px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: antiquewhite; */
+  height: 150px;
+  margin-top: 80px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  background-color: rgb(151, 50, 37);
+}
+.info {
+  margin-left: 50px;
+}
+.service {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.Mainchart {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.charth1 {
+  position: absolute;
+  top: -140px;
+  left: 40%;
+  font-size: 38px;
+  animation-name: moveText;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes moveText {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+}
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.topBtn {
+  border: none;
+  padding: 20px;
+  border-radius: 50%;
+  font-family: "Ownglyph_noocar-Rg";
+  font-size: 16px;
+  cursor: pointer;
+}

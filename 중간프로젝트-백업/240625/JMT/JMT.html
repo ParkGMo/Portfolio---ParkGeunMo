@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JMT</title>
+    <link rel="stylesheet" href="JMT.css" />
+    <link
+      rel="stylesheet"
+      href="../../박근모 - 메인/CSS/calendar_wether_date.css"
+    />
+    <link rel="stylesheet" href="../../박근모 - 메인/CSS/planner.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img class="Logo" src="../사진/DaejeonLoveU.png" width="250" />
+    <!-- 헤더부분 시작 -->
+    <header class="headrMain">
+      <div class="header bar">
+        <h1 class="header-H1" id="header-H1"><span>#</span>맛집</h1>
+        <div class="header-Main">
+          <input
+            class="header-Input"
+            type="text"
+            placeholder="원하는 맛집을 입력해주세요."
+          />
+          <div class="Search">
+            <img
+              src="../사진/free-icon-search-1150612.png"
+              width="30"
+              height="30"
+            />
+          </div>
+          <button class="clear">초기화</button>
+        </div>
+        <div class="Cate-subs">
+          <a class="Cate-sub" href="#"><span>#</span>기념일</a>
+          <a class="Cate-sub" href="#"><span>#</span>분위기 좋은</a>
+          <a class="Cate-sub" href="#"><span>#</span>비오는 날</a>
+          <a class="Cate-sub" href="#"><span>#</span>술 한잔</a>
+          <a class="Cate-sub" href="#"><span>#</span>야외</a>
+        </div>
+        <!-- 카테고리 시작 -->
+        <div class="CateGorys">
+          <ul class="CateGory">
+            <li class="Cate">
+              <a class="CateA" id="CateA" href="../Category/동구.html">동구</a>
+            </li>
+            <li class="Cate">
+              <a class="CateD" href="../Category/서구.html">서구</a>
+            </li>
+            <li class="Cate">
+              <a class="CateG" href="../Category/중구.html">중구</a>
+            </li>
+            <li class="Cate">
+              <a class="CateJ" href="../Category/유성구.html">유성구</a>
+            </li>
+          </ul>
+        </div>
+        <!-- 카테고리 끝 -->
+        <div class="result"></div>
+      </div>
+    </header>
+
+    <!-- 헤더부분 끝 -->
+    <!-- 사이드 리스트 시작 -->
+    <div class="sidebars">
+      <h1>이주의 맛집!</h1>
+      <h2>가장 인기 있는 맛집!</h2>
+      <div class="sidebar">
+        <ul class="sidebar-subs">
+          <li class="sidebar-sub">
+            <div class="up">▲</div>
+          </li>
+          <li class="sidebar-sub">
+            <div class="down">▼</div>
+          </li>
+          <li class="sidebar-sub">
+            <div>-</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#" class="sidebarA"> </a>
+            <div>-</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#" class="sidebarA"></a>
+            <div class="up">▲</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#" class="sidebarA"></a>
+            <div class="down">▼</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#" class="sidebarA"></a>
+            <div>-</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#"></a>
+            <div>-</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#"></a>
+            <div class="up">▲</div>
+          </li>
+          <li class="sidebar-sub">
+            <a href="#"></a>
+            <div class="down">▼</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 사이드 리스트 끝 -->
+    <!-- 메인부분 시작 -->
+    <div>
+      <div class="back">
+        <img class="backImg" id="backImg" src="../title/1.jpg" />
+      </div>
+    </div>
+    <main>
+      <section>
+        <div class="middle">
+          <h1 class="middleH1" id="middleH1"></h1>
+        </div>
+      </section>
+
+      <!-- 동구 시작 -->
+
+      <h1 class="MainH1 scroll-position" id="scrollPosition">🏆 Top 10</h1>
+      <section>
+        <div class="Main-first">
+          <div class="Main-title"></div>
+          <div class="Main-box1"></div>
+        </div>
+      </section>
+      <div class="Promise">
+        <a class="Promise-but">예약하기!</a>
+        <a class="Promise-but">플래너+</a>
+      </div>
+      <div class="TopLoop">
+        <a class="Top">
+          <i class="bx bx-arrow-from-bottom"></i>
+        </a>
+      </div>
+      <!-- 동구 끝 -->
+    </main>
+    <div class="banner">
+      <p>광고입니다.</p>
+    </div>
+
+    <div class="footer">
+      <div class="info">
+        <p>2024. DW Academy</p>
+        <p>tel: 042-123-4567</p>
+        <p>Email: DWA123@gmail.com</p>
+      </div>
+      <div class="service">
+        <p>고객센터</p>
+        <p>이용약관</p>
+      </div>
+    </div>
+    <!-- 메인부분 끝 -->
+    <!-- 플래너 시작 -->
+
+    <div class="plannerBox" id="plannerBox">
+      <div class="calendar-area">
+        <div class="calendar-planner">
+          <div class="calendar-header-planner">
+            <button id="prevMonth-planner">&lt;</button>
+            <div id="currentMonthYear-planner"></div>
+            <button id="nextMonth-planner">&gt;</button>
+          </div>
+          <div class="calendar-body-planner">
+            <div class="day-names-planner">
+              <div>S</div>
+              <div>M</div>
+              <div>Tu</div>
+              <div>W</div>
+              <div>Th</div>
+              <div>F</div>
+              <div>Sa</div>
+            </div>
+            <div class="days-planner" id="days-planner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="planListBox" id="planListBox">
+        <div class="nav-planner" id="nav-planner">
+          <div class="day1"></div>
+          <i class="bx bx-sun" undefined></i>
+        </div>
+        <div class="nav-planner"></div>
+        <a class="h-Tag1p"><span class="h-Tag1Span">#</span>맛집&nbsp;</a>
+        <div class="resturantBoxes" id="resturantBoxes"></div>
+        <a class="h-Tag2p"><span class="h-Tag2Span">#</span>카페&nbsp;</a>
+        <div class="cafeBoxes" id="cafeBoxes"></div>
+        <a class="h-Tag3p"><span class="h-Tag3Span">#</span>핫플</a>
+        <div class="hotPlaceBoxes" id="hotPlaceBoxes"></div>
+        <button class="shareBtn">공유하기</button>
+      </div>
+      <div class="changeSize">
+        <i class="changeSizeBtn bx bx-chevrons-down"></i>
+      </div>
+    </div>
+    <!-- 플래너 끝 -->
+  </body>
+  <script src="JMT.js" type="module"></script>
+  <script src="DLU_firebase.js" type="module"></script>
+  <script
+    src="../../박근모 - 메인/Javascript/calendarRangeX.js"
+    type="module"
+  ></script>
+  <script
+    src="../../박근모 - 메인/Javascript/planner.js"
+    type="module"
+  ></script>
+  <script src="../JMT/list.js" type="module"></script>
+</html>
