@@ -80,9 +80,8 @@
     const containerWidth = $container.width() - 90;
     const containerHeight = $container.height() - 100;
 
-    function creatWord() {
+    function createWord() {
       $(words).each((i, e) => {
-        // console.log(i, e);
         const spanTag = $(`<span></span>`);
         spanTag.addClass(`word`);
         spanTag.attr(`id`, e);
@@ -125,7 +124,7 @@
       });
     }
 
-    creatWord();
+    createWord();
     positionWord();
   </script>
 </html>
